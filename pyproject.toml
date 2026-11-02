@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parsivelreader"
+version = "0.2.0"
+description = "Leitura e analise dos dados do disdrometro OTT Parsivel2 gravados pelo XLink 500"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+graficos = ["matplotlib"]
+testes = ["pytest", "matplotlib"]
+
+[tool.setuptools]
+packages = ["parsivelreader"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
